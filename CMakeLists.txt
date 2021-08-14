@@ -33,6 +33,11 @@ if (CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
 	# include (CTest)
 endif()
 
+if (CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+	include(CMakePrintHelpers)
+	cmake_print_properties(TARGETS ${CMAKE_PROJECT_NAME} PROPERTIES TYPE ALIASED_TARGET)
+endif()
+
 
 add_subdirectory (src)
 
